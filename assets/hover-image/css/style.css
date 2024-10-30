@@ -1,0 +1,425 @@
+/************************************************
+* JAG HOVER IMAGE STYLE
+*************************************************/
+.jag-hoverimage-card{
+	height: 500px;
+	width: 100%;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.jag-hoverimage-overlay{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	transition: all .3s ease-in-out;
+}
+.jag-hoverimage-image2{
+	position: absolute;
+	transition: all .3s ease-in-out;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-size: cover;
+    background-position: center center;
+}
+.jag-hoverimage-card:hover .jag-hoverimage-image2{
+	opacity: 1;
+}
+.jag-hoverimage-card:hover .jag-hoverimage-overlay{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.jag-hoverimage-content{
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-align: center;
+	z-index: 99;
+	padding: 5px 40px;
+}
+.jag-himg-icon{
+	transition: .4s all ease-in-out;
+	-webkit-transition: .4s all ease-in-out;
+	-moz-transition: .4s all ease-in-out;
+	-ms-transition: .4s all ease-in-out;
+	animation-delay: .4s!important;
+	transition-delay: .4s!important;
+}
+.jag-hoverimage-title{
+	color: #ffffff;
+	font-size: 20px;
+	/*font-weight: 700;*/
+	display: inline-block;
+	margin: 5px 0;
+	transition: .4s all ease-in-out;
+	-webkit-transition: .4s all ease-in-out;
+	-moz-transition: .4s all ease-in-out;
+	-ms-transition: .4s all ease-in-out;
+	animation-delay: .6s!important;
+	transition-delay: .6s!important;
+}
+.jag-hoverimage-short-desc{
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: normal;
+	display: inline-block;
+	margin: 5px 0;
+	animation-delay: .8s!important;
+	transition-delay: .8s!important;
+	transition: .4s all ease-in-out;
+	-webkit-transition: .4s all ease-in-out;
+	-moz-transition: .4s all ease-in-out;
+	-ms-transition: .4s all ease-in-out;
+}
+.jag-hoverimage-card .jag-himg-readmore-wrapper,
+.jag-hoverimage-card .jag-himg-icon,
+.jag-hoverimage-card .jag-hoverimage-short-desc,
+.jag-hoverimage-card .jag-hoverimage-title{
+	position: relative;
+	left: 10px;
+	opacity: 0;
+}
+.jag-hoverimage-card .jag-align-left .jag-himg-readmore-wrapper,
+.jag-hoverimage-card .jag-align-left .jag-himg-icon,
+.jag-hoverimage-card .jag-align-left .jag-hoverimage-short-desc,
+.jag-hoverimage-card .jag-align-left .jag-hoverimage-title{
+	position: relative;
+	left: -10px;
+	opacity: 0;
+}
+.jag-hoverimage-card:hover .jag-himg-readmore-wrapper,
+.jag-hoverimage-card:hover .jag-himg-icon,
+.jag-hoverimage-card:hover .jag-hoverimage-short-desc,
+.jag-hoverimage-card:hover .jag-hoverimage-title{
+	opacity: 1;
+	left: 0px;
+}
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-overlay{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-title,
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-short-desc,
+.jag-hoverimage-card.jag-himg-hover .jag-himg-readmore-wrapper,
+.jag-hoverimage-card.jag-himg-hover .jag-himg-icon{
+	opacity: 1;
+	left: 0;
+}
+.jag-hoverimage-card.jag-title-default .jag-hoverimage-short-desc,
+.jag-hoverimage-card.jag-title-default .jag-himg-readmore-wrapper{
+	animation-delay: 0s!important;
+	transition-delay: 0s!important;
+}
+.jag-hoverimage-card.jag-title-default .jag-hoverimage-title{
+	opacity: 1;
+	left: 0;
+}
+.jag-hoverimage-card.jag-title-default .jag-title-default-wrapper{
+	max-height: 0;
+	transition: .8s all ease-in-out;
+	-webkit-transition: .8s all ease-in-out;
+	-moz-transition: .8 all ease-in-out;
+	-ms-transition: .8s all ease-in-out;
+	overflow: hidden;
+}
+.jag-hoverimage-card.jag-title-default:hover .jag-title-default-wrapper{
+	max-height: 300px;
+	overflow: visible;
+}
+.jag-hoverimage-left{
+	width: 4px;
+	height: 0;
+	left: 25px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	position: absolute;
+	z-index: 1;
+	background: white;
+}
+.jag-hoverimage-right{
+	width: 4px;
+	height: 0;
+	right: 25px;
+	bottom: 50%;
+	-webkit-transform: translateY(50%);
+	transform: translateY(50%);
+	position: absolute;
+	z-index: 1;
+	background: white;
+}
+.jag-hoverimage-top{
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: 26px;
+	height: 4px;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	background: white;
+}
+.jag-hoverimage-bottom{
+	right: 50%;
+	-webkit-transform: translateX(50%);
+	transform: translateX(50%);
+	bottom: 26px;
+	height: 4px;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	background: white;
+}
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-right,
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-left{
+	height: calc(100% - 52px);
+	transform: none;
+	top: 26px;
+}
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-bottom,
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-top{
+	transform: none;
+	width: calc(100% - 52px);
+	left: 26px;
+}
+.jag-hoverimage-card.jag-himg-hover .jag-hoverimage-content{
+	opacity: 1;
+}
+.jag-hoverimage-card:hover .jag-hoverimage-left{
+	height: calc(100% - 52px);
+}
+.jag-hoverimage-card:hover .jag-hoverimage-right{
+	height: calc(100% - 52px);
+}
+.jag-hoverimage-card:hover .jag-hoverimage-top{
+	width: calc(100% - 52px);
+}
+.jag-hoverimage-card:hover .jag-hoverimage-bottom{
+	width: calc(100% - 52px);
+}
+.jag-himg-s3 .jag-hoverimage-right,
+.jag-himg-s3 .jag-hoverimage-left,
+.jag-himg-s3 .jag-hoverimage-top,
+.jag-himg-s3 .jag-hoverimage-bottom{
+	transform: none;
+}
+.jag-hoverimage-card.jag-himg-s3:hover .jag-hoverimage-left,
+.jag-hoverimage-card.jag-himg-s3.jag-himg-hover .jag-hoverimage-left{
+	height: 100px;
+	top: 26px;
+	bottom: auto;
+}
+.jag-hoverimage-card.jag-himg-s3:hover .jag-hoverimage-right,
+.jag-hoverimage-card.jag-himg-s3.jag-himg-hover .jag-hoverimage-right{
+	height: 100px;
+	bottom: 26px;
+	top: auto;
+}
+.jag-hoverimage-card.jag-himg-s3:hover .jag-hoverimage-top,
+.jag-hoverimage-card.jag-himg-s3.jag-himg-hover .jag-hoverimage-top{
+	width: 100px;
+	left: 26px;
+	right: auto;
+}
+.jag-hoverimage-card.jag-himg-s3:hover .jag-hoverimage-bottom,
+.jag-hoverimage-card.jag-himg-s3.jag-himg-hover .jag-hoverimage-bottom{
+	width: 100px;
+	right: 26px;
+	left: auto;
+}
+.jag-hoverimage-card i.jag_icon_small{
+	font-size: 30px;
+}
+.jag-hoverimage-card i.jag_icon_medium{
+	font-size: 40px;
+}
+.jag-hoverimage-card i.jag_icon_large{
+	font-size: 50px;
+}
+.jag-himg-readmore-wrapper{
+	display: inline-block;
+	margin-top: 10px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	animation-delay: .9s!important;
+	transition-delay: .9s!important;
+}
+.jag-himg-readmore{
+	color: #000000;
+	display: inline-block;
+	padding: 8px 25px;
+	font-size: 16px;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	box-shadow: none !important;
+}
+.jag-himg-readmore:hover,
+.jag-himg-readmore:focus,
+.jag-himg-readmore:active{
+	box-shadow: none !important;
+	opacity: 0.8;
+	outline: none !important;
+	text-decoration: none;
+}
+.jag-btn-large {
+	font-size: 24px;
+	line-height: 30px;
+}
+.jag-btn-medium {
+	font-size: 18px;
+	line-height: 24px;
+}
+.jag-btn-small {
+	font-size: 14px;
+	line-height: 18px;
+}
+.jag-btn-fill {
+	background-color: #ffffff;
+}
+.jag-btn-outline {
+	border: 2px solid #ffffff;
+	background-color: none;
+}
+.jag-snow{
+	background-image: url('../img/snow-color.png');
+	background-repeat: repeat;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:1;
+	-webkit-animation: jag-snoweffect 16s linear infinite;
+	-moz-animation: jag-snoweffect 16s linear infinite;
+	-ms-animation: jag-snoweffect 16s linear infinite;
+	animation: jag-snoweffect 16s linear infinite;
+	z-index:9;
+	opacity: 0.7;
+}
+.jag-snow-white{
+	background-image: url('../img/snow-white.png');
+}
+.jag-snow-color{
+	background-image: url('../img/snow-color.png');
+}
+.jag-confetti{
+	background-image: url('../img/confetti.png');
+}
+@keyframes jag-snoweffect {
+	0% {background-position: 0px 0px}
+	50% {background-position: 0px 500px}
+	75% {background-position: 0px 700px}
+	100% {background-position:  0px 950px}
+}
+@-moz-keyframes jag-snoweffect {
+	0% {background-position: 0px 0px}
+	50% {background-position: 0px 500px}
+	75% {background-position: 0px 700px}
+	100% {background-position:  0px 950px}
+}
+@-webkit-keyframes jag-snoweffect {
+	0% {background-position: 0px 0px}
+	50% {background-position: 0px 500px}
+	75% {background-position: 0px 700px}
+	100% {background-position:  0px 950px}
+}
+@-ms-keyframes jag-snoweffect {
+	0% {background-position: 0px 0px}
+	50% {background-position: 0px 500px}
+	75% {background-position: 0px 700px}
+	100% {background-position:  0px 950px}
+}	
+.jag-align-left {
+    text-align: left;
+}
+.jag-align-center {
+    text-align: center;
+}
+.jag-align-right {
+    text-align: right;
+}
+.jag-align-top {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+    top: 35px;
+}
+.jag-align-bottom {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	top: inherit;
+    bottom: 35px;
+}
+.jag-himg-wrapper{
+	overflow: hidden;
+}
+.jag-himg-wrapper:hover .jag-hoverimage-card{
+	transform: scale(1.06);
+	-webkit-transform: scale(1.06);	
+}
+@media (max-width: 767px){
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-overlay{
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-title,
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-short-desc,
+	.jag-hoverimage-card.jag-himg-mhover .jag-himg-readmore-wrapper,
+	.jag-hoverimage-card.jag-himg-mhover .jag-himg-icon{
+		opacity: 1;
+		left: 0;
+	}
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-right,
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-left{
+		height: calc(100% - 52px);
+		transform: none;
+		top: 26px;
+	}
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-bottom,
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-top{
+		transform: none;
+		width: calc(100% - 52px);
+		left: 26px;
+	}
+	.jag-hoverimage-card.jag-himg-mhover .jag-hoverimage-content{
+		opacity: 1;
+	}
+	.jag-hoverimage-card.jag-himg-s3.jag-himg-mhover .jag-hoverimage-left{
+		height: 100px;
+		top: 26px;
+		bottom: auto;
+	}
+	.jag-hoverimage-card.jag-himg-s3.jag-himg-mhover .jag-hoverimage-right{
+		height: 100px;
+		bottom: 26px;
+		top: auto;
+	}
+	.jag-hoverimage-card.jag-himg-s3.jag-himg-mhover .jag-hoverimage-top{
+		width: 100px;
+		left: 26px;
+		right: auto;
+	}
+	.jag-hoverimage-card.jag-himg-s3.jag-himg-mhover .jag-hoverimage-bottom{
+		width: 100px;
+		right: 26px;
+		left: auto;
+	}
+}
